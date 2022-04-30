@@ -54,8 +54,13 @@ function get_totem(year, param)
 
 function init(year)
 {
+    etalon=1976
     document.getElementById('resyear').innerHTML=get_totem(year)
     document.getElementById('resdesc').innerHTML=get_totem(year,"desc")
+    let img = document.getElementById('totemimg');
+    
+    document.getElementById('totemimg').src = "image/"+Math.abs((year-etalon)%16)+".png";
+
 }
 
 //alert(get_totem(2002))
