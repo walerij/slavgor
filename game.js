@@ -1,4 +1,4 @@
-function get_totem(year)
+function get_totem(year, param)
 {
     etalon=1976
     ost=0
@@ -42,7 +42,20 @@ function get_totem(year)
     ]
 
     ost = Math.abs((year-etalon)%16)
-    return totems[ost]
+    if (param=='desc')
+    {
+        return totem_desc[ost]
+    }
+    else
+    {
+        return totems[ost] 
+    }
+}
+
+function init(year)
+{
+    document.getElementById('resyear').innerHTML=get_totem(year)
+    document.getElementById('resdesc').innerHTML=get_totem(year,"desc")
 }
 
 //alert(get_totem(2002))

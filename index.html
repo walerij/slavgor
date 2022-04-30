@@ -16,13 +16,18 @@
 
     <div class="container">
       <div class="row">
-        <h1>Славянский гороскоп</h1>
+        <h2 id="resyear" name="resyear"></h2>
+      </div>
+      <div class="row">
+        <p id="resdesc">
+
+        </p>
       </div>
         <div class="row">
-            <h2 id="resyear" name="resyear"></h2>
+            
 
             <input type="text" name="year" id="year" value="2020">
-            <button class="btn btn-primary" onclick="document.getElementById('resyear').innerHTML=get_totem(document.getElementById('year').value)">Нажми меня</button>
+            <button class="btn btn-primary" onclick="init(document.getElementById('year').value)">Нажми меня</button>
           
         </div>
     </div>
